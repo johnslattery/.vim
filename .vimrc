@@ -17,6 +17,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'johnslattery/vim-john'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
@@ -96,4 +97,13 @@ function! PadFileLines(length)
         endif
     endif
     call setline(1, map(getline(1, '$'), 'strpart(v:val . repeat(" ", a:length), 0, a:length)'))
+endfunction
+
+function UnformPsql()
+	%s/[\n\t]/ /g
+	%s/ \{2,}/ /g
+	%s/ \+)/)/g
+	%s/( \+/(/g
+	%s/ ;/;/g
+	%s/; $/;/g
 endfunction
