@@ -24,11 +24,6 @@ Plugin 'tpope/vim-surround'
 
 call vundle#end()
 
-" Tim Pope vim-pathogen
-" https://github.com/tpope/vim-pathogen
-"runtime bundle/vim-pathogen/autoload/pathogen.vim
-"call pathogen#infect()
-
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
 " options, so any other options should be set AFTER setting 'compatible'.
@@ -107,3 +102,8 @@ function UnformPsql()
 	%s/ ;/;/g
 	%s/; $/;/g
 endfunction
+
+command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+	 	\ | wincmd p | diffthis
+
+command ScratchBuf setlocal buftype=nofile bufhidden=hide noswapfile
