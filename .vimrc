@@ -21,6 +21,7 @@ Plugin 'johnslattery/vim-john'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-ruby/vim-ruby'
 
 call vundle#end()
 
