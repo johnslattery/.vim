@@ -17,7 +17,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'johnslattery/vim-john'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
@@ -69,6 +68,10 @@ set incsearch		" Incremental search
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+
+" http://tedlogan.com/techblog3.html
+" http://vim.wikia.com/wiki/Indenting_source_code
+set expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 set hlsearch
 
