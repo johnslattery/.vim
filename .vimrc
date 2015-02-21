@@ -80,6 +80,8 @@ set modeline
 set statusline=%F%m%r%h%w\ %{&ff}%(\ %Y%)\ \%03.3b/\%02.2B\ %04l,%04v\ %p%%\ %L\ %o/\%O
 set laststatus=2
 
+set hidden
+
 function MaxLineLen()
 	return max(map(getline(1,'$'), 'len(v:val)'))
 endfunction
