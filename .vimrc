@@ -8,7 +8,7 @@
 
 " This line should not be removed as it ensures that various options are
 " properly set to work with the Vim-related packages available in Debian.
-runtime! debian.vim
+"runtime! debian.vim
 
 " Vundle
 set nocompatible
@@ -61,7 +61,7 @@ set showmatch		" Show matching brackets.
 "set smartcase		" Do smart case matching
 set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
-"set hidden             " Hide buffers when they are abandoned
+set hidden             " Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
 
 " Source a global configuration file if available
@@ -79,8 +79,6 @@ set modeline
 
 set statusline=%F%m%r%h%w\ %{&ff}%(\ %Y%)\ \%03.3b/\%02.2B\ %04l,%04v\ %p%%\ %L\ %o/\%O
 set laststatus=2
-
-set hidden
 
 function MaxLineLen()
 	return max(map(getline(1,'$'), 'len(v:val)'))
