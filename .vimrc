@@ -23,6 +23,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'oplatek/conque-shell'
+Plugin 'pprovost/vim-ps1'
 
 call vundle#end()
 
