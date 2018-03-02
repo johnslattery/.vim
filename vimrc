@@ -113,4 +113,8 @@ endfunction
 command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 	 	\ | wincmd p | diffthis
 
+command Prose setlocal textwidth=78 spell spelllang=en_us
+
+command ProseWrap setlocal formatoptions+=1 lbr spell spelllang=en_us
+
 command ScratchBuf setlocal buftype=nofile bufhidden=hide noswapfile
