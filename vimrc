@@ -114,8 +114,12 @@ function UnformPsql()
 	%s/; $/;/g
 endfunction
 
-command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-	 	\ | wincmd p | diffthis
+" Git for Windows defines its own DiffOrig in
+" /usr/share/vim/vim??/defualts.vim
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+    \ | wincmd p | diffthis
+endif
 
 command Prose setlocal textwidth=78 spell spelllang=en_us
 
