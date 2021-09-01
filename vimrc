@@ -82,7 +82,7 @@ set hlsearch
 
 set modeline
 
-set statusline=%F%m%r%h%w\ %{&ff}%(\ %Y%)\ \%03.3b/\%02.2B\ %04l,%04v\ %p%%\ %L\ %o/\%O
+set statusline=%f%m%r%h%w\ %{&ff}\ %{&fenc}%(\ %Y%)\ %l,%c%V\ %p%%(%L)\ %o/\0x%O\ %b/0x%B
 set laststatus=2
 
 function MaxLineLen()
