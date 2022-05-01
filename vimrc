@@ -11,14 +11,14 @@
 "runtime! debian.vim
 
 " User runtime path based on location of vimrc.
-let $USERRTP=fnamemodify(expand("$MYVIMRC"), ":p:h")
+let s:userrtp=fnamemodify(expand("$MYVIMRC"), ":p:h")
 
 " Vundle
 set nocompatible
 filetype off
 " Until I'm done with Windows...
-let &rtp.=','.$USERRTP.'/bundle/Vundle.vim'
-call vundle#begin($USERRTP.'/bundle/')
+let &rtp.=','.s:userrtp.'/bundle/Vundle.vim'
+call vundle#begin(s:userrtp.'/bundle/')
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'tmhedberg/matchit'
