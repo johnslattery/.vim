@@ -21,12 +21,10 @@ let &rtp.=','.s:userrtp.'/bundle/Vundle.vim'
 call vundle#begin(s:userrtp.'/bundle/')
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/dbext.vim'
-Plugin 'oplatek/conque-shell'
 Plugin 'pprovost/vim-ps1'
 
 call vundle#end()
