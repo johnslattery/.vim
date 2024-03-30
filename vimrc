@@ -112,6 +112,12 @@ function UnformPsql()
 	%s/; $/;/g
 endfunction
 
+command Prose setlocal textwidth=78 spell spelllang=en_us
+
+command ProseWrap setlocal formatoptions+=1 lbr spell spelllang=en_us
+
+command ScratchBuf setlocal buftype=nofile bufhidden=hide noswapfile
+
 " Git for Windows defines its own DiffOrig in
 " /usr/share/vim/vim??/defualts.vim
 if !exists(":DiffOrig")
@@ -119,8 +125,7 @@ if !exists(":DiffOrig")
     \ | wincmd p | diffthis
 endif
 
-command Prose setlocal textwidth=78 spell spelllang=en_us
-
-command ProseWrap setlocal formatoptions+=1 lbr spell spelllang=en_us
-
-command ScratchBuf setlocal buftype=nofile bufhidden=hide noswapfile
+" Have just one viminfo file on Windows when using git-bash.
+if has('win32')
+  set viminfo+=n~/.viminfo
+endif
